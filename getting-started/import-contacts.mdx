@@ -1,39 +1,45 @@
 ---
-title: "Import Your Existing Contacts into CRE Fuel in Minutes"
+title: "Import Your Existing Contacts into CRE Fuel"
 sidebarTitle: "Import Contacts"
-description: "Upload a CSV or spreadsheet to bring your existing contact list into CRE Fuel quickly without re-entering names and numbers by hand."
+description: "Bring your existing contact list into CRE Fuel from a CSV file, mapping your columns to CRE Fuel fields so you never re-type a name or number."
 ---
 
-If you already have contacts in a spreadsheet, another CRM, or an exported file, you can bring them all into CRE Fuel at once using the import tool. You do not need to add contacts one by one.
+If your contacts live in a spreadsheet or another CRM, bring them in all at once instead of adding them one by one.
 
 <Steps>
-  <Step title="Go to Contacts">
-    Click **Contacts** in the left navigation menu.
+  <Step title="Export your contacts as a CSV">
+    From your current CRM or spreadsheet, export to **CSV**. In Google Sheets that is **File > Download > Comma Separated Values (.csv)**. In Excel it is **File > Save As** and choosing **CSV**.
   </Step>
-  <Step title="Click Import">
-    In the top-right area of the Contacts page, click the **Import** button.
+  <Step title="Go to Settings > Import & Export Contacts">
+    Click your profile icon in the top-right corner, then **Settings**, then **Import & Export Contacts**.
   </Step>
-  <Step title="Upload your file">
-    Click **Choose File** and select your spreadsheet or CSV from your computer. Then click **Upload**.
+  <Step title="Choose your file">
+    Select the CSV from your computer.
   </Step>
-  <Step title="Map your columns">
-    CRE Fuel shows a column-mapping screen. Use the dropdowns to match each column in your file to the correct CRE Fuel field. For example, match your "Full Name" column to the **Name** field and your "Cell" column to the **Phone** field.
+  <Step title="Match your columns to CRE Fuel fields">
+    CRE Fuel reads your headings and asks what each column is. Match your "Cell" column to **Phone**, your "Company" column to **Company**, and so on.
+
+    If a column has no matching field, you can create one on the spot by naming it. Anything you do not want, you can leave unmapped.
   </Step>
-  <Step title="Click Import">
-    Once your columns are mapped, click **Import**. CRE Fuel loads your contacts. A confirmation screen shows how many records were added.
+  <Step title="Import">
+    CRE Fuel creates the contacts and tells you how many landed.
   </Step>
 </Steps>
 
+<Warning>
+  **CSV only.** CRE Fuel does not read `.xlsx` Excel files directly. If your list is in Excel, save it as CSV first. It is one extra step and it takes a few seconds.
+</Warning>
+
 <Tip>
-  The only required columns are **Name** and at least one of **Phone** or **Email**. All other columns are optional. If a column in your file does not match any CRE Fuel field, you can skip it during mapping.
+  **Include a phone number wherever you have one.** CRE Fuel matches people on phone number, so a row with a phone will correctly update someone who is already in your list instead of creating a second copy of them.
 </Tip>
 
-<Accordion title="What file formats are supported?">
-  CRE Fuel accepts the following formats for contact imports:
+<Accordion title="What if I import the same list twice?">
+  Contacts are matched on phone number, so importing the same file again updates the same people rather than duplicating them. Rows with no phone number cannot be matched that way and may create a second record.
 
-  - **CSV** (.csv) - the most reliable format and works with any spreadsheet app
-  - **Excel** (.xlsx) - exported directly from Microsoft Excel
-  - **Google Sheets export** - go to File > Download > Comma Separated Values (.csv) in Google Sheets and upload the resulting file
+  If duplicates do appear, go to **Contacts > Duplicates**, where CRE Fuel groups likely matches so you can merge them.
+</Accordion>
 
-  Files must be under 10 MB. If your file is larger, split it into multiple imports.
+<Accordion title="Can someone do this for me?">
+  Yes. If your list is large or messy, ask about the white-glove import rather than fighting the spreadsheet. Use **Get help** in your profile menu.
 </Accordion>
