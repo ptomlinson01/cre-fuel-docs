@@ -1,45 +1,62 @@
 ---
-title: "Match Buyers to Properties Automatically in CRE Fuel"
+title: "Matching Buyers to Properties"
 sidebarTitle: "Matching"
-description: "Find out which buyers in your book are the right fit for a listing you are selling, so you can reach out fast and move deals forward."
+description: "Ask AI Fuel in plain English who fits a listing. It searches your tagged buyer book only, separates exact from partial matches, and can build a call list."
 ---
 
-When you take on a new listing, you want to know immediately which buyers in your book are a fit. CRE Fuel compares the property's type, price, location, and cap rate against every active buy box in your contacts and returns a ranked list of matched buyers.
+You do not fill in a search form. **You ask AI Fuel in plain English.**
 
-## What You Are Trying to Do
+> *"Industrial buyers over $2 million"*
+> *"Who wants retail in the north valley under $5M?"*
+> *"Cash buyers for a 7 cap"*
 
-You have a property you are trying to sell. You want to find the buyers in your book who are most likely to be interested, so you can contact them right away.
-
-<Steps>
-  <Step title="Open the Seller deal card">
-    Go to **Deals** in the left sidebar. Find the listing under the Seller pipeline and click its deal card to open it.
-  </Step>
-  <Step title="Click Find Buyers">
-    On the deal card, click the **Find Buyers** button. CRE Fuel will run matching against all active buy boxes in your contact database.
-  </Step>
-  <Step title="Review the matched buyers list">
-    A list of matched buyers appears, sorted by how closely each buyer's buy box aligns with the property. Review the names, their criteria, and their last contact date.
-  </Step>
-  <Step title="Start a conversation">
-    Next to any buyer you want to reach out to, click **Contact**. This opens the conversation panel so you can call, text, or email them directly from CRE Fuel.
-  </Step>
-</Steps>
-
-## How the Matching Works
-
-CRE Fuel checks each buyer's buy box against the property on four factors:
-
-- **Asset type** must match what the buyer targets
-- **Price** must fall within the buyer's min and max
-- **Location** must be in one of the buyer's preferred markets
-- **Cap rate** must fall within the buyer's cap rate range
-
-A buyer appears in results if the property clears all the criteria they have set. Fields left blank in a buy box are treated as no preference and do not filter that buyer out.
+It turns that into the right criteria and searches your book.
 
 <Tip>
-  Run matching as soon as you sign a new listing. The sooner you identify interested buyers, the sooner you can send a targeted outreach blast before competing brokers get there first.
+  On a seller's listing there is a button that **copies the listing as a ready-made prompt** you can paste straight into AI Fuel. Faster than describing the property yourself, and it will not miss the asking price.
 </Tip>
 
-<Info>
-  Buyers without a buy box will not appear in match results. Add a buy box to any buyer contact to include them in future matching.
-</Info>
+## It searches your tagged buyer book only
+
+<Warning>
+  **Owners and sellers are never returned as buyers, even when they own exactly the asset type you are searching for.**
+
+  This is the trap the design exists to avoid. An office *owner* and an office *buyer* both look like "Office" in the data. Matching on criteria alone surfaces owners in a buyer search, and you end up calling someone about buying a building they already own.
+
+  So matching looks only at contacts you have actually tagged as buyers. If someone is not in your book, they will not appear.
+</Warning>
+
+The honest consequence: **a thin book returns thin results**, and that is the correct answer rather than a bug. If AI Fuel says you have two office buyers, you have two office buyers. See [Buyer Book](/buyers/buyer-book).
+
+When the book is too thin, it can **widen the search to your old buying leads**, but it will offer first and label those results as **prospects**, never as confirmed buyers.
+
+## Exact matches and partial matches
+
+You get two numbers, and they mean different things.
+
+| | What it is |
+|---|---|
+| **Exact** | Every criterion you asked about is on file and fits. |
+| **Partial** | Everything on file fits, but some fields are blank. |
+
+**A blank field is a data gap, not a "no".** A buyer who wants industrial but has no price recorded is not disqualified from a $2M industrial listing, you just do not know yet. Those buyers come back as partial matches, with a note saying which fields are missing.
+
+<Tip>
+  Treat the partial list as two things at once: people worth calling, and a **cleanup worklist**. Filling in those blank fields is exactly the work that makes the book sharper next time.
+</Tip>
+
+## Turning matches into a call list
+
+Once you have matches, you can build a **call list from the full match set**, not just the names shown on screen. The list re-runs the same match, so the count you were told is the count you get.
+
+## The reverse: matching a buyer to your listings
+
+You can also go the other way. Give AI Fuel a buyer and ask who is selling what they want, and it scores your captured listings and rolls them up to the seller who owns them.
+
+<Note>
+  Two honest limits on seller matching.
+
+  **There is no location filter yet**, because listings store a street address rather than a submarket. It matches on asset type, asking price and cap rate, so if you name an area it will tell you it could not filter on that.
+
+  **It only sees listings you have actually captured.** A thin result usually means listings need their asking price and asset type recorded, not that there is no inventory.
+</Note>
