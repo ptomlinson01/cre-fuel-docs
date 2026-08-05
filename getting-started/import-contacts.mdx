@@ -31,13 +31,13 @@ If your contacts live in a spreadsheet or another CRM, bring them in all at once
 </Warning>
 
 <Tip>
-  **Include a phone number wherever you have one.** CRE Fuel matches people on phone number, so a row with a phone will correctly update someone who is already in your list instead of creating a second copy of them.
+  **Include an email or phone number wherever you have one.** CRE Fuel uses those to recognise people you already have, so they do not get added twice. A row with neither cannot be checked.
 </Tip>
 
 <Accordion title="What if I import the same list twice?">
-  Contacts are matched on phone number, so importing the same file again updates the same people rather than duplicating them. Rows with no phone number cannot be matched that way and may create a second record.
+  Nothing breaks. Before creating anything, CRE Fuel checks each row against your existing contacts by email or phone and **skips the ones you already have**. Importing can only add people, never change or overwrite them.
 
-  If duplicates do appear, go to **Contacts > Duplicates**, where CRE Fuel groups likely matches so you can merge them.
+  The flip side: if you correct something in your spreadsheet and re-import, that correction **will not** come through, because the row is recognised and skipped. Edit those people in CRE Fuel directly instead.
 </Accordion>
 
 <Accordion title="Can someone do this for me?">

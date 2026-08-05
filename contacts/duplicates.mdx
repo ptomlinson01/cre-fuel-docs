@@ -21,9 +21,9 @@ CRE Fuel groups likely duplicates by one signal at a time, and you choose which:
 </Warning>
 
 <Note>
-  **Importing works differently, and that is intentional.** When you import a list, contacts *are* matched on phone number, so re-importing updates the same people instead of duplicating them.
+  **Importing works differently, and that is intentional.** When you import a list, each row is checked against your existing contacts by **email or phone**, and any match is skipped rather than merged or updated.
 
-  Two different jobs: matching a fresh import against people you already have is a narrow question with a known answer, while sweeping your whole base for accidental doubles is a broad one where a shared office line does real damage.
+  Two different jobs. Checking one incoming row against people you already have is a narrow question, so phone is a useful signal there. Sweeping your whole list for accidental doubles is a broad one, where a shared office line would produce hundreds of false matches. Same word, opposite answer.
 </Note>
 
 ## Merge Duplicate Contacts

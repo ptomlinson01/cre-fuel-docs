@@ -48,17 +48,15 @@ All other columns like Company, Property Type, Tags, and Notes are optional but 
 </Steps>
 
 <Accordion title="What happens to contacts that already exist?">
-  Rows are matched on **phone number**. A row whose phone matches someone you already have **updates that person** rather than creating a second copy of them.
+  Before creating anything, CRE Fuel checks each row against your existing contacts by **email or phone number**. If it finds a match, that row is **skipped entirely**. Nothing is written and your existing contact is left exactly as it was.
 
-  It is an update, not a skip, and that distinction matters:
+  **Importing can only ever add people. It never changes anyone you already have.** That is deliberate, and it is why re-importing a list is safe.
 
-  - Fields in your file **overwrite** what is already on the record, including the name. If your spreadsheet has an old or abbreviated version of someone's name, that is what you will be left with.
-  - Tags in your file **replace** their existing tags rather than being added to them.
-  - A row with **no phone number** cannot be matched this way, so it will create a new record even if that person is already in your list.
+  The trade-off worth knowing: if you fix a phone number in your spreadsheet and re-import, **that correction will not reach CRE Fuel**, because the row matches an existing contact and gets skipped. To change someone who is already in your list, edit them in CRE Fuel directly.
 
-  Nothing is flagged for review during an import. To find accidental doubles afterwards, use **Contacts > Duplicates**, which sweeps your whole base separately. See [Duplicates](/contacts/duplicates).
+  A row with **neither** an email nor a phone number cannot be checked, so it is always created. That is the one way an import can produce a double.
 </Accordion>
 
 <Tip>
-  If you are re-importing a list you have edited elsewhere, export your current contacts first so you have the previous values. Overwriting is easy to do and there is no undo.
+  Nothing is flagged for review during an import. To find accidental doubles afterwards, use **Contacts > Duplicates**, which sweeps your whole list as a separate job. See [Duplicates](/contacts/duplicates).
 </Tip>
