@@ -6,9 +6,25 @@ description: "Keep your CRE Fuel contact list clean by reviewing CRE Fuel's sugg
 
 Duplicate contacts clutter your list, skew your call counts, and cause confusion when you're working fast. CRE Fuel automatically finds likely duplicates so you can clean them up in minutes.
 
-<Info>
-  CRE Fuel finds duplicates by matching phone number or email address. If two records share either one, they appear as a suggested match for you to review.
-</Info>
+CRE Fuel groups likely duplicates by one signal at a time, and you choose which:
+
+| Match by | What it catches |
+|---|---|
+| **Email** (default) | The strongest signal. The same address entered twice is almost always the same person. |
+| **Name** | The same person typed in twice with no email, or two different ones. |
+| **Company** | Everyone recorded under one business, useful for spotting the same contact entered under slightly different names. |
+
+<Warning>
+  **Duplicates are never matched on phone number, on purpose.** In CRE, a whole brokerage often shares one main office line. Matching on phone would flag seventy unrelated agents as the same person and bury the real duplicates underneath.
+
+  This is the one place where the obvious signal is the wrong one.
+</Warning>
+
+<Note>
+  **Importing works differently, and that is intentional.** When you import a list, contacts *are* matched on phone number, so re-importing updates the same people instead of duplicating them.
+
+  Two different jobs: matching a fresh import against people you already have is a narrow question with a known answer, while sweeping your whole base for accidental doubles is a broad one where a shared office line does real damage.
+</Note>
 
 ## Merge Duplicate Contacts
 
