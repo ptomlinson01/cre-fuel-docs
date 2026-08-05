@@ -1,46 +1,61 @@
 ---
-title: "Set a Buyer Contact's Buy Box Criteria in CRE Fuel"
+title: "Qualifying a Buyer and Setting Their Buy Box"
 sidebarTitle: "Buy Box"
-description: "Define exactly what a buyer is looking for so CRE Fuel can surface the right property matches automatically and save you hours of manual sorting."
+description: "Record what a buyer actually wants so CRE Fuel can match them to listings. Three fields are required, and buyer type means intent, not financing."
 ---
 
-A buy box is the set of criteria a buyer uses to decide whether a property is worth a look. It covers asset type, price range, geography, cap rate, and square footage. When you fill it in, CRE Fuel uses those criteria to automatically match that buyer to properties in your pipeline.
-
-## What You Are Trying to Do
-
-You want to record what a specific buyer is looking for so CRE Fuel can surface matching listings for you without manual digging.
+Qualifying a buyer records what they are looking for, so that when a listing lands you can find the right people in seconds instead of going from memory.
 
 <Steps>
-  <Step title="Open the buyer's contact record">
-    Go to **Contacts** in the left sidebar. Find the buyer and click their name to open their contact record.
+  <Step title="Open the contact and click Qualify as Buyer">
+    On the contact record, click **Qualify as Buyer**. If they are already qualified the button reads **Edit qualification**, and a **Buyer ✓** marker shows on the record.
   </Step>
-  <Step title="Click Edit Buy Box">
-    On the contact record, click the **Edit Buy Box** button. A panel will open with all the buy box fields.
+  <Step title="Fill in the three required fields">
+    **Tier**, **Buyer type**, and **Price range**. You cannot save without all three, and the dialog will tell you which one is missing.
   </Step>
-  <Step title="Select the asset type">
-    In the **Asset Type** field, choose the property type this buyer targets. Examples: Multifamily, Industrial, Retail, Office, NNN.
-  </Step>
-  <Step title="Enter the price range">
-    Fill in the **Min Price** and **Max Price** fields. Use whole dollar amounts, no commas needed.
-  </Step>
-  <Step title="Add preferred markets">
-    In the **Preferred Markets** field, type each metro or submarket this buyer will consider. Press **Enter** after each one to add it.
-  </Step>
-  <Step title="Set the cap rate range">
-    Enter a **Min Cap Rate** and **Max Cap Rate**. Enter them as plain numbers, for example type 5.5 for a 5.5% cap rate.
-  </Step>
-  <Step title="Set the square footage range">
-    Enter a **Min SF** and **Max SF** to define the size range the buyer will consider.
-  </Step>
-  <Step title="Save the buy box">
-    Click **Save**. CRE Fuel will now use this buy box when matching properties to buyers.
+  <Step title="Add whatever else you know">
+    Asset class, location, cap rate. Partial is fine and normal. You will learn more on the next call.
   </Step>
 </Steps>
 
+## Buyer type is INTENT, not financing
+
+This is the field people get wrong, so it is worth being blunt about.
+
+**Buyer type describes what the buyer wants out of the asset:**
+
+| Buyer type | What it means |
+|---|---|
+| **Investment (Cap Rate)** | They are buying income. The return is the point. |
+| **Owner-User** | They are buying somewhere to run their own business. |
+| **Both** | They will look at either. |
+| **None** | Not applicable. |
+
+**Whether they pay cash is a completely separate question.** Cash versus financed is recorded as a **tier tag** (cash buyer / financed buyer), never as buyer type.
+
+<Warning>
+  Do not put "cash" in buyer type. A cash buyer might be an investor or an owner-user, and those two want opposite properties. Collapsing the two questions into one field throws away the answer that actually drives matching.
+</Warning>
+
+## Primary asset class drives their follow-up cadence
+
+If you set a **primary asset class**, it is not just a label. **The follow-up cadence branches on it**, so an industrial buyer and a retail buyer can sit on different clocks.
+
 <Tip>
-  The more fields you fill in, the sharper the matches CRE Fuel returns. Even a partial buy box helps, but a complete one keeps irrelevant results out of your list.
+  Set the primary class even for a buyer who looks at several things. It decides how often they hear from you, and "everything" is not a schedule.
+</Tip>
+
+## The rest of the buy box
+
+- **Price range** — required, and displayed with thousands separators so a $3,000,000 buyer is never mistaken for a $30,000,000 one.
+- **Asset class** — everything they will consider, which can be broader than their primary.
+- **Location** — the markets or submarkets they will look at.
+- **Cap rate from** — the minimum return an investment buyer will accept.
+
+<Tip>
+  **Copy for Fuel AI** puts the buyer's requirement on your clipboard as plain text, which is handy for pasting into an email or a text without retyping what they told you.
 </Tip>
 
 <Note>
-  You can have multiple buyers with different buy boxes. Each buy box is tied to one contact record and matched independently.
+  A partial buy box still matches. The more you fill in the tighter the results, but do not leave a half-known buyer unrecorded because you are missing their cap-rate floor.
 </Note>
