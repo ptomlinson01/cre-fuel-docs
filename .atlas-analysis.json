@@ -1,30 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "CRE Fuel",
+  "projectDescription": "CRE Fuel is a daily cockpit for solo CRE brokers and small brokerage teams, handling contacts, calling and texting, deal pipelines, buyer matching, marketing campaigns, and a scorecard that shows brokers exactly how their day is going.",
   "theme": "almond",
-  "name": "CRE Fuel",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@crefuel.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Open CRE Fuel",
-      "href": "https://app.crefuel.com"
-    }
-  },
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -105,7 +86,18 @@
       }
     ]
   },
-  "footer": {
-    "socials": {}
-  }
+  "keyFeatures": [
+    "Contact management with tags, search, and deduplication",
+    "Built-in calling and texting with call recordings and notes",
+    "Cadences and guided call sessions for systematic outreach",
+    "Deal pipelines for Sellers, Buyers, and Tenants",
+    "Buyer buy-box and automated property matching",
+    "Email and text blast marketing with audience segmentation",
+    "Nurture campaigns for long-term follow-up",
+    "Daily scorecard showing broker performance in plain English",
+    "Dashboard with drift tracking and follow-up reminders",
+    "Spreadsheet contact import",
+    "Team and multi-user support"
+  ],
+  "publicApiSurface": []
 }

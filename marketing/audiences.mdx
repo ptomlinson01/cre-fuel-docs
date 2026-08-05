@@ -1,0 +1,84 @@
+---
+title: "Build Audiences to Target the Right Contacts"
+sidebarTitle: "Audiences"
+description: "Create saved contact groups based on tags, location, deal stage, and more. Use audiences in blasts and campaigns to reach exactly who you want."
+---
+
+An audience is a saved filter that pulls together a specific group of contacts from your database. You build it once, and CRE Fuel keeps it up to date automatically as your contacts change. Audiences are the foundation of every blast and nurture campaign you send.
+
+## What Makes an Audience
+
+You can filter contacts by any combination of these fields:
+
+<CardGroup cols={2}>
+  <Card title="Tags" icon="tag">
+    Group contacts you've already labeled, like "Seller Lead" or "Past Client."
+  </Card>
+  <Card title="Location" icon="map-pin">
+    Filter by city, state, or zip code to target a specific market.
+  </Card>
+  <Card title="Property Type" icon="building">
+    Narrow to contacts associated with office, retail, industrial, multifamily, and more.
+  </Card>
+  <Card title="Deal Stage" icon="chart-bar">
+    Target contacts tied to deals at a particular stage in your pipeline.
+  </Card>
+  <Card title="Last Contact Date" icon="calendar">
+    Find contacts you haven't touched in a set number of days.
+  </Card>
+</CardGroup>
+
+---
+
+## Create an Audience
+
+<Steps>
+  <Step title="Go to Audiences">
+    Click **Marketing** in the left sidebar, then click **Audiences**.
+  </Step>
+  <Step title="Start a new audience">
+    Click **New Audience** in the top right corner.
+  </Step>
+  <Step title="Name your audience">
+    Give it a clear, descriptive name. You'll pick this name later when setting up blasts and campaigns, so be specific.
+  </Step>
+  <Step title="Add filter rules">
+    Click **Add Filter** and choose your first condition. Add as many filters as you need. All filters work together, so contacts must match every rule to be included.
+  </Step>
+  <Step title="Save">
+    Click **Save**. CRE Fuel shows you a contact count so you can confirm the audience looks right before using it.
+  </Step>
+</Steps>
+
+<Tip>
+  Audiences update automatically. If a contact gains a new tag or changes location, they move in or out of your audience on their own. You never need to rebuild a list manually.
+</Tip>
+
+---
+
+## Useful Audience Examples
+
+<Accordion title="Sellers in Dallas contacted in the last 90 days">
+  **Filters to use:**
+  - Tag = "Seller"
+  - Location = Dallas
+  - Last Contact Date = within 90 days
+
+  Good for sending a market update to warm seller leads you've been working recently.
+</Accordion>
+
+<Accordion title="All buyers with a buy box over $5M">
+  **Filters to use:**
+  - Tag = "Buyer"
+  - Buy Box = greater than $5,000,000
+
+  Good for sending a new listing that fits larger acquisition criteria right away.
+</Accordion>
+
+<Accordion title="Cold leads not contacted in over 60 days">
+  **Filters to use:**
+  - Last Contact Date = more than 60 days ago
+  - Tag = "Lead"
+
+  Good for enrolling in a nurture campaign to re-engage without manual outreach.
+</Accordion>

@@ -1,0 +1,47 @@
+---
+title: "Import Contacts from a Spreadsheet or CSV File"
+sidebarTitle: "Spreadsheet Import"
+description: "Bring hundreds of contacts into CRE Fuel at once by uploading a CSV or Excel file and mapping your columns to the right fields."
+---
+
+If you have a contact list sitting in Excel or Google Sheets, you can bring the whole thing into CRE Fuel in a few minutes. No copy-pasting required.
+
+<Tip>
+  Save your spreadsheet as a CSV file before importing. Go to **File > Download > CSV** in Google Sheets, or **File > Save As > CSV** in Excel. CSV files import more reliably than .xlsx files.
+</Tip>
+
+## Required Columns
+
+Your file must include at least these two things:
+
+- **Name** (first and last name, or a combined full name column)
+- **Phone** or **Email** (at least one of the two)
+
+All other columns like Company, Property Type, Tags, and Notes are optional but recommended.
+
+## Import Your Contacts
+
+<Steps>
+  <Step title="Go to Contacts">
+    Click **Contacts** in the left sidebar.
+  </Step>
+  <Step title="Open Import">
+    Click **Import** near the top of the Contacts page.
+  </Step>
+  <Step title="Upload your file">
+    Click **Choose File** and select your CSV file. CRE Fuel reads the file and shows you a column mapping screen.
+  </Step>
+  <Step title="Map your columns">
+    For each column in your spreadsheet, use the dropdown to select the matching CRE Fuel field. For example, map your "Full Name" column to the **Name** field. Skip any columns you don't need.
+  </Step>
+  <Step title="Preview the import">
+    CRE Fuel shows a preview of the first few rows. Confirm the data looks correct before continuing.
+  </Step>
+  <Step title="Click Import">
+    Click the **Import** button. CRE Fuel loads your contacts and shows a summary when finished.
+  </Step>
+</Steps>
+
+<Accordion title="What happens to contacts that already exist?">
+  CRE Fuel checks each incoming row against your existing contacts. If a row is an exact match on phone number or email address, CRE Fuel skips it so you don't end up with duplicates. If a row is a close but not exact match, CRE Fuel flags it for your review. You'll see those flagged records in the **Duplicates** tab after the import finishes.
+</Accordion>
