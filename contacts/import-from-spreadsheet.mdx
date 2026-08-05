@@ -48,5 +48,17 @@ All other columns like Company, Property Type, Tags, and Notes are optional but 
 </Steps>
 
 <Accordion title="What happens to contacts that already exist?">
-  CRE Fuel checks each incoming row against your existing contacts. If a row is an exact match on phone number or email address, CRE Fuel skips it so you don't end up with duplicates. If a row is a close but not exact match, CRE Fuel flags it for your review. You'll see those flagged records in the **Duplicates** tab after the import finishes.
+  Rows are matched on **phone number**. A row whose phone matches someone you already have **updates that person** rather than creating a second copy of them.
+
+  It is an update, not a skip, and that distinction matters:
+
+  - Fields in your file **overwrite** what is already on the record, including the name. If your spreadsheet has an old or abbreviated version of someone's name, that is what you will be left with.
+  - Tags in your file **replace** their existing tags rather than being added to them.
+  - A row with **no phone number** cannot be matched this way, so it will create a new record even if that person is already in your list.
+
+  Nothing is flagged for review during an import. To find accidental doubles afterwards, use **Contacts > Duplicates**, which sweeps your whole base separately. See [Duplicates](/contacts/duplicates).
 </Accordion>
+
+<Tip>
+  If you are re-importing a list you have edited elsewhere, export your current contacts first so you have the previous values. Overwriting is easy to do and there is no undo.
+</Tip>
