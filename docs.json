@@ -3,26 +3,26 @@
   "theme": "almond",
   "name": "CRE Fuel",
   "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
+    "primary": "#FF6B2C",
+    "light": "#FF9558",
+    "dark": "#FF6B2C"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/flame.png",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/flame.png",
+    "dark": "/flame.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@crefuel.com"
+        "label": "Send feedback",
+        "href": "https://crefuel.co/feedback"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Open CRE Fuel",
-      "href": "https://app.crefuel.com"
+      "href": "https://app.crefuel.co"
     }
   },
   "navigation": {
