@@ -1,84 +1,56 @@
 ---
-title: "Build and Manage Audiences to Target the Right Contacts"
+title: "Audiences: Who a Blast Goes To"
 sidebarTitle: "Audiences"
-description: "Create saved contact groups based on tags, location, deal stage, and more. Use audiences in blasts and campaigns to reach exactly who you want."
+description: "Audiences are built on the Contacts screen, not in Marketing. Filter your contacts, save the list, and it becomes a choice in the blast picker."
 ---
 
-An audience is a saved filter that pulls together a specific group of contacts from your database. You build it once, and CRE Fuel keeps it up to date automatically as your contacts change. Audiences are the foundation of every blast and nurture campaign you send.
+An audience is just a **saved contact list**. There is no separate audience builder.
 
-## What Makes an Audience
+<Info>
+  **You build audiences on the Contacts screen, not in Marketing.**
 
-You can filter contacts by any combination of these fields:
+  Filter your contacts however you need, save that list, and it appears in the audience picker the next time you send a blast. One place to build a segment, one segment model across the whole app, rather than two lists that drift apart.
+</Info>
 
-<CardGroup cols={2}>
-  <Card title="Tags" icon="tag">
-    Group contacts you've already labeled, like "Seller Lead" or "Past Client."
-  </Card>
-  <Card title="Location" icon="map-pin">
-    Filter by city, state, or zip code to target a specific market.
-  </Card>
-  <Card title="Property Type" icon="building">
-    Narrow to contacts associated with office, retail, industrial, multifamily, and more.
-  </Card>
-  <Card title="Deal Stage" icon="chart-bar">
-    Target contacts tied to deals at a particular stage in your pipeline.
-  </Card>
-  <Card title="Last Contact Date" icon="calendar">
-    Find contacts you haven't touched in a set number of days.
-  </Card>
-</CardGroup>
-
----
-
-## Create an Audience
+## Building one
 
 <Steps>
-  <Step title="Go to Audiences">
-    Click **Marketing** in the left sidebar, then click **Audiences**.
+  <Step title="Go to Contacts and filter">
+    Use the filter rail to narrow to the people you want. Combine as many filters as you like.
   </Step>
-  <Step title="Start a new audience">
-    Click **New Audience** in the top right corner.
+  <Step title="Save the list">
+    Save it with a clear, specific name. That name is what you will be picking from later, so "Industrial owners, north valley" beats "List 3".
   </Step>
-  <Step title="Name your audience">
-    Give it a clear, descriptive name. You'll pick this name later when setting up blasts and campaigns, so be specific.
-  </Step>
-  <Step title="Add filter rules">
-    Click **Add Filter** and choose your first condition. Add as many filters as you need. All filters work together, so contacts must match every rule to be included.
-  </Step>
-  <Step title="Save">
-    Click **Save**. CRE Fuel shows you a contact count so you can confirm the audience looks right before using it.
+  <Step title="Use it in a blast">
+    In **Marketing > New Blast**, your saved list is in the audience picker.
   </Step>
 </Steps>
 
+## What is already in the picker
+
+You do not have to build anything to send your first blast. The picker offers **All contacts**, then the built-in CRE segments, then your own saved lists.
+
+The built-in segments are the same ones in your Contacts nav:
+
+| | |
+|---|---|
+| Sellers · Hot Sellers | Landlords · Tenants |
+| Cash buyers · Financed buyers | Past Clients |
+| Brokers / Referral Partners | Dormant / Needs Reconnecting |
+| This Week's New Leads · Recently Added | Cold Call Sheet |
+
+<Note>
+  **Your AI call lists are deliberately kept out of the blast picker.**
+
+  When you ask AI Fuel to build you a call list, that is a money-priority list of people to **phone**. Those are not a mailing audience, and having them appear in the blast dropdown is how someone accidentally emails a list they meant to dial.
+
+  They stay in Contacts where they belong. This is on purpose, not an omission.
+</Note>
+
+## Lists stay current
+
+A saved list is a filter, not a frozen snapshot of names. If someone gains a tag or goes cold, they move in or out of the list on their own. You never rebuild it by hand.
+
 <Tip>
-  Audiences update automatically. If a contact gains a new tag or changes location, they move in or out of your audience on their own. You never need to rebuild a list manually.
+  Check the recipient count before you send. It is the fastest way to catch a filter that is broader or narrower than you meant, and it costs two seconds.
 </Tip>
-
----
-
-## Useful Audience Examples
-
-<Accordion title="Sellers in Dallas contacted in the last 90 days">
-  **Filters to use:**
-  - Tag = "Seller"
-  - Location = Dallas
-  - Last Contact Date = within 90 days
-
-  Good for sending a market update to warm seller leads you've been working recently.
-</Accordion>
-
-<Accordion title="All buyers with a buy box over $5M">
-  **Filters to use:**
-  - Tag = "Buyer"
-  - Buy Box = greater than $5,000,000
-
-  Good for sending a new listing that fits larger acquisition criteria right away.
-</Accordion>
-
-<Accordion title="Cold leads not contacted in over 60 days">
-  **Filters to use:**
-  - Last Contact Date = more than 60 days ago
-  - Tag = "Lead"
-
-  Good for enrolling in a nurture campaign to re-engage without manual outreach.
-</Accordion>

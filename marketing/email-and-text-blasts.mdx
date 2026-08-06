@@ -4,7 +4,15 @@ sidebarTitle: "Blasts"
 description: "Send a one-time email or text blast to a group of contacts in minutes. Reach the right people fast without touching each record one by one."
 ---
 
-Blasts let you send a single message to a group of contacts all at once. Use them for market updates, new listings, price reductions, or any time you need to reach a crowd quickly. CRE Fuel handles delivery and compliance automatically.
+Blasts let you send a single message to a group of contacts at once. Use them for market updates, new listings, price reductions, or any time you need to reach a crowd quickly.
+
+<Warning>
+  **Email works out of the box. Texting has to be switched on first.**
+
+  Sending texts requires a **one-time carrier registration**, under **Settings > Phone > Texting (SMS)**. This is the carriers' requirement for business messaging, not ours, and until it is done your texts will not deliver.
+
+  Texting is a paid add-on. Calling is included.
+</Warning>
 
 ## Send an Email Blast
 
@@ -26,8 +34,20 @@ Blasts let you send a single message to a group of contacts all at once. Use the
   </Step>
 </Steps>
 
+## Merge tags
+
+Merge tags use **double curly braces**. `{{first_name}}` works; `{first_name}` does not, and it will send exactly as typed to everyone on your list.
+
+**About the contact:**
+
+`{{first_name}}` · `{{last_name}}` · `{{full_name}}` · `{{company}}` · `{{email}}` · `{{phone}}`
+
+**About you**, so a template can be reused across a team without rewriting the sign-off:
+
+`{{your_first_name}}` · `{{your_brokerage}}` · `{{your_email}}`
+
 <Tip>
-  Add the merge tag **{first_name}** anywhere in your subject or body. CRE Fuel replaces it with each contact's first name automatically. Personalized messages get noticeably higher response rates.
+  Always send yourself a test before the real thing. It is the only way to catch a merge tag that did not fill in, and an email that opens "Hi ," is worse than one with no name at all.
 </Tip>
 
 <Info>
