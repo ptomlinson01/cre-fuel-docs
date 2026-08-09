@@ -1,57 +1,72 @@
 ---
-title: "Set Up Automated Calling and Texting Cadences in CRE Fuel"
+title: "How Follow-Up Cadences Put Every Seller on a Call Clock"
 sidebarTitle: "Cadences"
-description: "Build a sequence of calls, texts, and emails that runs on a schedule so every contact gets consistent follow-up without extra effort on your end."
+description: "Tag a seller and CRE Fuel starts a call clock for them. Cadences are already running on your account, with sensible spacing you can change."
 ---
 
-A cadence is a series of touches scheduled over time. You decide the type of touch (call, text, or email), the delay between steps, and the message template for each step. Once you assign a cadence to a contact, CRE Fuel reminds you when each step is due. No contact falls through the cracks.
+A cadence is **how often you call a tag**. Tag a contact as a hot seller and they go on a two-day clock. Log the call and the clock resets. When they come due again, they show up on your call list.
 
-## Creating a Cadence
+<Note>
+  **This is already on.** You do not build a cadence, assign it, or start it. Cadences ship switched on with sensible spacing, and tagging a contact is the only action you take.
+</Note>
+
+## What ships turned on
+
+<CardGroup cols={3}>
+  <Card title="Hot Seller · every 2 days">
+    Ready to sell now or within about six months. No email campaign. You call these constantly.
+  </Card>
+  <Card title="12-Month Seller · every 30 days">
+    Might sell within the next year or two. Also on the 12-month email campaign, so calls stay light.
+  </Card>
+  <Card title="10-Year Seller · every 120 days">
+    Does not want to sell. A long, light touch so you are top of mind whenever that changes.
+  </Card>
+</CardGroup>
+
+## How it actually works
 
 <Steps>
-  <Step title="Go to Calling > Cadences">
-    Click **Calling** in the left sidebar, then click **Cadences** in the submenu.
+  <Step title="You tag the contact">
+    Add `seller-hot`, `seller-12-mo`, or `seller-10-yr` to a contact. That is the whole setup.
   </Step>
-  <Step title="Click New Cadence">
-    Click the **New Cadence** button in the top right corner.
+  <Step title="The clock starts">
+    CRE Fuel tracks when you last spoke to them and counts forward by that tag's spacing.
   </Step>
-  <Step title="Name your cadence">
-    Type a clear name in the **Cadence Name** field. Use something you will recognize later, like "New Buyer Outreach" or "Cold Owner Follow-Up."
+  <Step title="They surface when due">
+    Once they pass their interval, they appear on your call list to be worked.
   </Step>
-  <Step title="Add your steps">
-    Click **Add Step** to create the first touch. For each step, set three things:
-    - **Type** - choose Call, Text, or Email
-    - **Delay** - set how many days after the previous step this touch should happen
-    - **Template** - choose a saved message template or write one now
-
-    Repeat until all your steps are added.
-  </Step>
-  <Step title="Click Save">
-    Click **Save**. Your cadence is ready to assign to contacts.
+  <Step title="Logging the call resets it">
+    Log the call and the clock starts again from that day. There is nothing to tick off and nothing to reschedule.
   </Step>
 </Steps>
 
 <Tip>
-  Start simple. A 3-step cadence covers most situations: a call on Day 1, a text on Day 3, and a second call on Day 7. You can always add more steps later.
+  If a contact carries more than one of these tags, the **most urgent one wins**. Someone tagged both hot and 12-month is treated as hot, so you never under-call a live seller because of a leftover tag.
 </Tip>
 
-## Assigning a Cadence to a Contact
+## Changing the spacing
+
+The numbers are defaults, not rules. If you work a hot seller every day rather than every second day, change it.
 
 <Steps>
-  <Step title="Open the contact record">
-    Search for the contact's name and click their record to open it.
+  <Step title="Open the settings">
+    Go to **Settings → Phone → Follow-up Cadences**.
   </Step>
-  <Step title="Click Start Cadence">
-    Click the **Start Cadence** button near the top of the contact record.
-  </Step>
-  <Step title="Choose your cadence">
-    A list of your saved cadences appears. Click the one you want to assign.
-  </Step>
-  <Step title="Click Start">
-    Click **Start**. CRE Fuel schedules all the steps and will surface each one on the due date in your task queue and scorecard.
+  <Step title="Adjust the interval">
+    Change the number of days for any cadence to match how you actually work.
   </Step>
 </Steps>
 
-<Note>
-  You can pause or cancel a cadence at any time by returning to the contact record and clicking **Manage Cadence**.
-</Note>
+<Warning>
+  Setting an interval to zero turns that cadence **off**. Contacts with that tag will stop surfacing on your call list.
+</Warning>
+
+## Cadences are calls, campaigns are email
+
+Two different systems, easy to confuse:
+
+- **Cadences** decide how often a tagged contact comes back around for **you to call**.
+- **Campaigns** send the **email and text** follow-up automatically. See [Nurture campaigns](/marketing/nurture-campaigns).
+
+A 12-month seller is on both: the campaign keeps in touch in writing, and the cadence brings them back to your call list every 30 days.
