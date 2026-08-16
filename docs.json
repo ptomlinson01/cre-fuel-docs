@@ -78,6 +78,13 @@
             ]
           },
           {
+            "group": "Properties",
+            "pages": [
+              "properties/rent-roll",
+              "properties/available-spaces"
+            ]
+          },
+          {
             "group": "Marketing",
             "pages": [
               "marketing/email-and-text-blasts",
