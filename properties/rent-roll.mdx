@@ -20,12 +20,46 @@ Once the roll is in, those dates feed **Properties > Available spaces**, which g
 
 ## Add a rent roll
 
-1. Open the property.
-2. Find the **Rent Roll** card and click **Add a rent roll**.
-3. Fill in the first space and click **Add space**.
-4. Repeat for each suite.
+Open the property, find the **Rent Roll** card, and click **Add a rent roll**. There are two ways in, and you can mix them freely.
+
+### Load the spreadsheet you were sent
+
+If the management company sent you a rent roll, use it. Click **Choose a spreadsheet** and pick the `.xlsx` or `.csv`, or copy the rows straight out of Excel and paste them into the box.
+
+Include the heading row. CRE Fuel does not go by the column names — those are unreliable, and on real rolls two different columns are sometimes labelled the same thing — but it uses them to narrow down where to look, and then checks its reading against the arithmetic on the page.
+
+**Nothing is saved until you accept.** You get a summary first:
+
+> 3 new · 4 changed · 8 unchanged
+
+along with anything worth a second look, such as a row where the rent and the per-square-foot figure do not agree with each other.
+
+<Warning>
+  Accepting **never deletes** a space. If a suite is missing from the new roll, CRE Fuel lists it and leaves it alone rather than removing it — management rolls are sometimes filtered, and a suite falling off one export is not a good enough reason to delete it. Remove it yourself if it really is gone.
+</Warning>
+
+### Or type them in
+
+Click **Add a space**, fill in the row, and repeat for each suite. At around 15 suites a building this takes a few minutes.
 
 **Only the unit number is required.** Everything else can wait, so you can list the suites first and come back for the leases when you have the paperwork in front of you.
+
+### Keeping it up to date from a new roll
+
+When the next roll arrives, open the card and click **Load an updated roll**. CRE Fuel matches on the unit number and shows you only what moved — the rents that stepped, the tenant who left, the suite that came free. Accept it and the building is current.
+
+<Info>
+  A tenant who has taken an extra suite is recognised as the same space growing, not as one space disappearing and another appearing.
+</Info>
+
+## What CRE Fuel cannot read
+
+**A scanned PDF.** If the roll reached you as photographs of paper — no text you can select — there is nothing for the software to read, and it will tell you so rather than pretend the roll was empty.
+
+Two ways round it, in order of preference:
+
+1. **Ask for the original.** The management company almost always has a spreadsheet, and it reads exactly.
+2. **Open the PDF, copy the rows, and paste them in.** If the PDF has selectable text this works fine.
 
 ## What each field is for
 
@@ -72,7 +106,9 @@ If any lease has run past its end date, the card says so in orange. That is the 
 
 Sometimes the card shows this instead of a percentage. It means CRE Fuel cannot work occupancy out honestly, and it will not print a number it cannot stand behind.
 
-This happens when a space is marked as unknown, or when the spaces have no square footage to measure against — a pad site or a parking area, for example.
+This happens when a space is marked as unknown, or when **any** space has no square footage to measure against — a pad site, a parking area, a cell tower on a ground lease.
+
+One unmeasurable space is enough to withhold the figure, and that is deliberate. If your only vacancy is a pad with no square footage, the arithmetic would say the building is 100% leased while a space stands empty.
 
 <Tip>
   If you would rather see a figure, open the card and give the unclear spaces a square footage or mark them leased or vacant. The percentage appears as soon as the building adds up.
