@@ -1,0 +1,127 @@
+---
+title: "Connect Mojo Dialer So Flagged Contacts Land in CRE Fuel"
+sidebarTitle: "Mojo Dialer"
+description: "Dial in Mojo, flag someone, and they appear in CRE Fuel tagged and ready — automatically. You set this up once, and only the account owner sets it up."
+---
+
+If you dial with Mojo, this connects the two. You flag someone in Mojo, and a few seconds later they are in CRE Fuel, tagged, with their phone numbers, their notes, and the property address attached as a real property record.
+
+You set it up once. After that you never come back to this screen — you just dial.
+
+<Note>
+  **Not a Mojo user? Skip this page entirely.** Nothing here applies to you, and nothing in CRE Fuel is waiting on it.
+</Note>
+
+## Who sets this up
+
+**Only the account owner.** The Mojo setup is one shared configuration for your whole brokerage — every person on your team syncs through it — so one person owns it and everyone else inherits it.
+
+If you are on someone's team, you will see the screen and what each group does, but the settings are read-only for you. That is deliberate: a change here re-tags what the entire team is dialing, and there is no per-person copy to fall back on.
+
+## Before you start
+
+- **Use Chrome, Edge, or Brave.** The connector is a browser add-on, and Safari and Firefox cannot install it.
+- **Be logged into Mojo** in that same browser. CRE Fuel never asks for your Mojo password — it uses the session you are already signed into.
+
+## Set it up
+
+<Steps>
+  <Step title="Go to Settings > Integrations > Mojo Dialer">
+    Click your profile icon in the top-right corner, then **Settings**. Choose **Integrations**, then **Mojo Dialer**.
+  </Step>
+  <Step title="Add the browser add-on">
+    The page has an **Add to Chrome** button. Click it, accept, and come back. This is what lets CRE Fuel read the contacts you flag, using your own Mojo login.
+  </Step>
+  <Step title="Reload your Mojo tab">
+    If you already had Mojo open in another tab, refresh it once. A tab that was open before the add-on arrived is not being watched yet.
+  </Step>
+  <Step title="Tell CRE Fuel what each Mojo group means">
+    Your Mojo groups appear in a list. For each one you care about, pick the CRE Fuel **tag** it should apply.
+
+    The tag is the only required part. You can also have the group start a **campaign** and drop the person into a **pipeline stage**, but start with tags and add the rest later.
+  </Step>
+  <Step title="Hit Start syncing, once per group">
+    This does two things: it brings the group's existing people into CRE Fuel, and it switches that group over to syncing automatically from then on.
+
+    A group showing **Syncing automatically** in green is finished. A group showing **Not started** still needs this step.
+  </Step>
+</Steps>
+
+That is the whole setup. Day to day you just dial in Mojo; when you flag someone, they land in CRE Fuel on their own.
+
+## What a group should map to
+
+Pick the tag by what the group *means to you*, not by what it is called in Mojo. Mojo group names are yours and no two brokerages use the same ones.
+
+A useful way to think about it: a group answers "what did I just learn about this person?" and the tag is how CRE Fuel will find them again later.
+
+<Info>
+  **Tags drive your call cadence.** How often CRE Fuel tells you to call someone comes from their tag. A hot seller gets chased hard; a ten-year hold does not. Mapping the group to the right tag is what makes the follow-up correct without you thinking about it.
+</Info>
+
+## What comes across
+
+When someone syncs, CRE Fuel carries:
+
+- **Every phone number** on the person in Mojo, not just the first one
+- **Their notes**, kept with their original dates
+- **The property address**, attached as a linked property record
+
+<Note>
+  **The address becomes a property, not the contact's home address.** The address column in Mojo is the building you are calling about, not where the person lives. CRE Fuel files it as a property and links them to it, which is why you can later search by building and find every owner you have ever spoken to about it.
+</Note>
+
+## Keeping it running
+
+The connector works while your browser is open and you are logged into Mojo. Two things worth knowing:
+
+- **CRE Fuel does not have to be open** at the moment you flag someone. The add-on holds onto it and hands it over the next time you open CRE Fuel.
+- **Open CRE Fuel at least once a day.** Flagged contacts wait up to 24 hours to be handed over. Past that they are dropped, and you would need to flag the person again.
+
+## If contacts stop arriving
+
+CRE Fuel tells you when the pipe is broken rather than leaving you to guess. If you see a banner at the top of the screen, read it before doing anything else — it says which of these it is.
+
+<AccordionGroup>
+  <Accordion title="None of your Mojo groups are connected yet">
+    Nothing has been mapped, so everything you flag goes nowhere. If you are the account owner, go to **Settings > Integrations > Mojo Dialer** and map your groups. If you are on someone's team, ask them — you cannot change it yourself, by design.
+  </Accordion>
+
+  <Accordion title="Mojo sync is down">
+    Something on our side could not be read. Keep dialing — your flags are held and go through once it clears.
+  </Accordion>
+
+  <Accordion title="No Mojo tags have reached CRE Fuel in a while">
+    This one is a question, not an accusation. It is completely normal if you have not flagged anyone.
+
+    If you *have* been flagging people, **reload your Mojo tab**. That reconnects the add-on and is the fix roughly every time.
+  </Accordion>
+
+  <Accordion title="One specific person did not come across">
+    Open **Settings > Integrations > Mojo Dialer** and hit **Catch up** on their group. That re-checks the group for anyone missing.
+
+    Catch up is available to everyone on the team, not just the owner — it uses the existing setup rather than changing it.
+  </Accordion>
+
+  <Accordion title="I flagged someone and then deleted their phone number in Mojo">
+    Flag first, then wait a few seconds before deleting the number. CRE Fuel reads the person's details from Mojo at the moment it carries them over, so a number removed too quickly can leave the record incomplete.
+  </Accordion>
+</AccordionGroup>
+
+## Groups you do not want synced
+
+Mojo will not let you deselect every group — one always has to stay checked. Most brokers keep a spare group called **NO-GROUP** to park an accidental flag on.
+
+CRE Fuel knows about that one and will never sync it, whatever you map it to. You do not need to do anything to make that true.
+
+<Accordion title="Do I have to map every group?">
+  No. Map the ones that mean something and leave the rest alone. An unmapped group is simply ignored — flagging someone into it does nothing, which is often exactly what you want.
+</Accordion>
+
+<Accordion title="Does the add-on see anything besides Mojo?">
+  It only talks to Mojo and CRE Fuel. It reads the contacts you flag using the Mojo session you are already logged into, and sends them to your CRE Fuel account. Nothing goes anywhere else, and you never type your Mojo password into CRE Fuel.
+</Accordion>
+
+<Accordion title="Does the add-on update itself?">
+  Yes. It updates on its own in the background, usually within a few hours of a new version. You never reinstall it.
+</Accordion>
