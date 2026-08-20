@@ -1,73 +1,73 @@
 ---
-title: "How CRE Fuel Keeps Your Data Safe"
+title: "Where Your CRE Fuel Data Lives"
 sidebarTitle: "Overview"
-description: "Where your contacts and deals actually live, who can reach them, and what happens to your book if you ever stop using CRE Fuel."
+description: "A straight answer about what CRE Fuel is built on, where your records are kept, and what we do not claim."
 ---
 
-Your book is your business. Here is a straight answer about where it lives and who can get to it.
+Your book is your business, so here is a plain answer about where it lives.
 
-## Your data is not sitting on somebody's laptop
+## CRE Fuel is built on HighLevel
 
-CRE Fuel runs on managed cloud infrastructure in the United States. There is no server under a desk, no synced folder, and no single computer whose loss or theft would expose your contacts.
+CRE Fuel is built on HighLevel as its underlying CRM platform. Core CRM records are maintained in your brokerage's HighLevel account. CRE Fuel provides a broker-focused workflow and interface on top of that platform.
 
-That includes ours. If every machine at CRE Fuel died tomorrow, your data would be untouched and the app would stay up. That is a deliberate design rule, not a happy accident.
+CRE Fuel also uses a limited number of providers for application hosting, operational storage, communications, optional AI features, billing, and other documented functions. All of them are named on our technical trust page.
 
-## The companies that hold it are independently audited
+<Warning>
+  HighLevel's certifications and audit reports belong to HighLevel. They are not a CRE Fuel certification, and CRE Fuel does not inherit them. Our technical trust page links to HighLevel's published documents so your IT team can read them at the source.
+</Warning>
 
-CRE Fuel is a layer on top of infrastructure run by established providers. Those providers carry the certifications an IT department looks for:
+---
 
-<CardGroup cols={2}>
-  <Card title="SOC 2 Type II" icon="shield-check">
-    Assessed annually by outside auditors against standards for security, availability, and confidentiality.
-  </Card>
-  <Card title="ISO/IEC 27001" icon="certificate">
-    Certified information security management, verified by an accredited body.
-  </Card>
-</CardGroup>
+## What CRE Fuel does
 
-They also run annual third-party penetration testing, encrypt your data both while it is stored and while it moves, and require two-factor authentication for their own staff.
+- **We do not store your password.** We keep a one-way scrambled version that cannot be turned back into your password. Nobody at CRE Fuel can read it.
+- **Password changes use a single-use, time-limited link** sent to the account email address.
+- **You can sign in with Google.** If your firm uses Google Workspace, you can use that account.
+- **Repeated wrong passwords are blocked.** Sign-in attempts are slowed and then temporarily locked.
+- **Permissions are enforced by the server.** If a team member is limited to their own contacts, or blocked from seeing commissions, that limit is real. It is not a hidden menu they can get around by editing a web address.
+
+---
+
+## AI features are something you choose to run
+
+The two AI-assisted views on your dashboard, **"What should I do right now?"** and **"Where am I drifting?"**, do not analyze anything until you press the button on that card. Both cards fill in normally without AI.
+
+Nothing is sent for AI analysis when you open the dashboard, refresh it, or leave it sitting open.
 
 <Note>
-  If your IT team or your brokerage's ownership want the actual certificates and audit reports, the [Trust & Security](https://crefuel.co/trust) page names every provider in the stack and links straight to their audit reports. Nothing is held back. The [For Your IT Team](/security/for-your-it-team) page has the technical detail alongside it.
+  Call summaries work differently. If you turn call recording on, a summary is produced after a recorded call as part of that feature.
 </Note>
 
 ---
 
-## What CRE Fuel does on top of that
+## Call recordings and summaries
 
-- **Your password is never stored.** Not by us, not anywhere. We keep a one-way scrambled version that cannot be turned back into your password. Nobody at CRE Fuel can see it, including us.
-- **Your account is separate from every other broker's.** Each brokerage has its own isolated account. There is no shared list where your contacts sit next to someone else's.
-- **Permissions are enforced on the server.** If a team member is limited to their own contacts, or blocked from seeing commissions, that limit is real. It is not a hidden menu they could get around by editing a web address.
-- **Two-factor authentication is available** on every account, and we recommend turning it on. See [Two-Factor Authentication](/security/two-factor).
+If you turn call recording on, the audio is stored in your own phone provider account. A transcription service produces text, and a written summary is saved to the contact record.
+
+CRE Fuel does not retain raw call transcripts after processing. A written call summary may be saved to the relevant contact record.
 
 ---
 
-## Your data stays yours
+## Getting your data out
 
-You own your book outright.
+Contacts can be exported as CSV files through the Contacts page, using selected columns and active filters, or through Settings using the available standard export. Commission records can be exported separately as CSV files.
 
-<CardGroup cols={3}>
-  <Card title="Exportable" icon="download">
-    Your contacts and deals can be exported at any time in standard formats.
-  </Card>
-  <Card title="Yours on exit" icon="box-open">
-    Stop using CRE Fuel and you keep everything. Nothing is held back.
-  </Card>
-  <Card title="No lock-in" icon="unlock">
-    CRE Fuel is the windshield, not the engine. Removing it does not take the car.
-  </Card>
-</CardGroup>
-
-We built it this way on purpose. A tool that holds your book hostage is a tool you cannot evaluate honestly.
+Certain additional records are maintained in the underlying platform.
 
 ---
 
 ## What we do not claim
 
-CRE Fuel is a young product and does not hold its own SOC 2 certification yet. We are not going to imply otherwise.
+CRE Fuel does not have its own SOC 2 report, ISO certificate, or penetration test. It is a young product and we are not going to suggest otherwise.
 
-What is true is that the companies holding, encrypting, and hosting your data are independently audited today, and the practices in the layer we control are listed on [For Your IT Team](/security/for-your-it-team). We will walk any reviewer through any of it.
+---
 
-<Card title="For Your IT Team" icon="building-lock" href="/security/for-your-it-team">
+## For your IT team
+
+The technical trust page lists what CRE Fuel does, what HighLevel provides, the providers involved in documented CRE Fuel workflows, and what is not verified or not available.
+
+<Card title="CRE Fuel Technical Trust Page" icon="building-lock" href="https://crefuel.co/trust">
   The technical detail, written for a security review.
 </Card>
+
+If your IT team has specific questions after reviewing the materials, please send them our way. We will provide the information we have available and share the appropriate provider documentation where a question relates to the underlying platform.
