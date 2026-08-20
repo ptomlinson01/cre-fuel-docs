@@ -1,0 +1,122 @@
+---
+title: "Turn On Two-Factor Authentication"
+sidebarTitle: "Two-Factor"
+description: "Add a second step to sign-in so your password alone is not enough to get into your book. Takes about two minutes to set up."
+---
+
+Two-factor authentication means that even if somebody learns your password, they still cannot get into your account. They would also need the phone in your pocket.
+
+For a broker, the thing worth protecting is not really the login. It is your contact list, your buyer relationships, and your deal history. Two minutes now is worth it.
+
+## What you need
+
+Any authenticator app on your phone. If you do not already have one, all of these are free and any of them will work:
+
+- Microsoft Authenticator
+- Google Authenticator
+- 1Password
+- Authy
+
+<Note>
+  If your brokerage already uses Microsoft 365, you very likely have Microsoft Authenticator on your phone already.
+</Note>
+
+---
+
+## Turn it on
+
+<Steps>
+  <Step title="Open Security settings">
+    Go to **Settings > Security**, then click **Set up two-factor**.
+  </Step>
+  <Step title="Scan the square">
+    Open your authenticator app, choose to add an account, and point your camera at the square on screen.
+
+    Cannot scan it? Click **Can't scan it?** underneath and type the setup key into your app by hand instead.
+  </Step>
+  <Step title="Enter the 6-digit code">
+    Your app will start showing a 6-digit code that changes every 30 seconds. Type the current one in and click **Turn on**.
+  </Step>
+  <Step title="Save your recovery codes">
+    CRE Fuel gives you ten recovery codes. **Save them now.** Print them, or put them in your password manager. Then tick the box and click **Done**.
+  </Step>
+</Steps>
+
+<Warning>
+  **Your recovery codes are shown once and never again.**
+
+  They are the way back into your account if you lose your phone. We cannot show them to you a second time, because we do not keep a readable copy — that is the same reason nobody can steal them from us.
+
+  If you close that screen without saving them, generate a new set straight away while you are still signed in.
+</Warning>
+
+---
+
+## Signing in from now on
+
+Nothing changes day to day. CRE Fuel remembers you on a device you have already used.
+
+When you sign in on a **new** device, you will enter your password as usual, then be asked for the 6-digit code from your app. Codes change every 30 seconds, so if yours rolls over while you are typing, just enter the new one.
+
+<Tip>
+  On a phone, the code often appears above your keyboard as a suggestion. Tap it instead of typing it.
+</Tip>
+
+---
+
+## If you lose your phone
+
+Enter one of your **recovery codes** in the same box where the 6-digit code would go. Each one works once.
+
+CRE Fuel will then drop you on the Security page rather than the dashboard, on purpose. Sort out your new phone while you are thinking about it:
+
+<Steps>
+  <Step title="Turn two-factor off">
+    **Settings > Security > Turn off.** It will ask for a code — use another recovery code.
+  </Step>
+  <Step title="Set it up again">
+    Click **Set up two-factor** and scan the square with the authenticator app on your new phone.
+  </Step>
+  <Step title="Save the new recovery codes">
+    You get a fresh set. The old ones stop working.
+  </Step>
+</Steps>
+
+<Warning>
+  If you have lost your phone **and** you cannot find your recovery codes, reach out to us. Getting you back in takes identity checks and it is not instant, which is exactly what stops somebody else doing it in your name. Save the codes and you never need this.
+</Warning>
+
+---
+
+## Managing it later
+
+Both of these live under **Settings > Security**, and both ask for a current code first. That is deliberate: it stops anyone who walks up to your unlocked laptop from quietly switching your protection off.
+
+<CardGroup cols={2}>
+  <Card title="New recovery codes" icon="rotate">
+    Generates ten fresh codes and kills the old ones. Use this if you are not sure where your printed set ended up, or if you are running low.
+  </Card>
+  <Card title="Turn off" icon="shield-slash">
+    Goes back to password-only. You will need a current code or a recovery code to confirm.
+  </Card>
+</CardGroup>
+
+CRE Fuel tells you how many recovery codes you have left on the Security page, and warns you when you are down to your last two.
+
+---
+
+## Why some codes get refused
+
+<AccordionGroup>
+  <Accordion title="It says my code is wrong, but I just read it off my phone">
+    Codes last 30 seconds. If yours changed between reading it and pressing the button, enter the new one. CRE Fuel already allows for a phone clock that is slightly out, so genuine clock drift is not usually the problem.
+  </Accordion>
+  <Accordion title="It says the account is paused for 15 minutes">
+    Five wrong codes in a row pauses the account for 15 minutes. This is what makes guessing a 6-digit code pointless, and it is doing its job.
+
+    If it was not you making those attempts, somebody may have your password. Change it as soon as you are back in.
+  </Accordion>
+  <Accordion title="A code worked a minute ago and now it doesn't">
+    A code can only be used once. If somebody glanced at your screen, they cannot reuse the code they saw.
+  </Accordion>
+</AccordionGroup>

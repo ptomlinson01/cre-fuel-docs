@@ -1,0 +1,129 @@
+---
+title: "CRE Fuel Security Detail for Your IT Team"
+sidebarTitle: "For Your IT Team"
+description: "The technical answers a corporate security review asks for: authentication, encryption, tenancy, hosting, and what CRE Fuel does not claim."
+---
+
+Written for the person doing a vendor security review, not for a broker. If your IT department or your brokerage's ownership have questions, this page and a conversation should cover most of them.
+
+<Note>
+  **Send this page to your IT team.** If they need something that is not here, we will answer it directly, complete your standard vendor questionnaire, or get on a call with them. See [Getting more](#getting-more) at the bottom.
+</Note>
+
+## Architecture in one line
+
+CRE Fuel is an application layer over managed, independently audited infrastructure. It is not a self-hosted product and there is no on-premise component. All customer records live with the platform providers described below, not on any CRE Fuel employee machine.
+
+---
+
+## Authentication
+
+| Control | Implementation |
+|---|---|
+| Password storage | One-way `scrypt` hash, per-user random salt, constant-time comparison. No plaintext or reversible form exists anywhere. |
+| Password change | Out-of-band only, through a single-use expiring emailed link. No in-app old-to-new form. |
+| Session | `HMAC-SHA256` signed cookie, `httpOnly`, `Secure`, `SameSite=Lax`. Signature re-verified server-side on every request. |
+| Multi-factor | TOTP per RFC 6238, SHA-1 / 6 digits / 30s, verified against the published RFC test vectors. Used passcodes cannot be replayed within their window. |
+| MFA recovery | Ten single-use codes, stored as one-way hashes. Regenerating voids the previous set. |
+| Brute-force | Rate limiting on all sign-in endpoints, plus a durable lockout after repeated failed passcodes. The lockout counter is persisted, not held in server memory, so it cannot be shed by reaching a fresh instance. |
+| Federated identity | OpenID Connect to Microsoft Entra ID and to Google. Scopes are `openid email profile` only — no mail, calendar, or contacts access is requested or possible. |
+| MFA coverage | Password, Google, and Microsoft sign-in all pass through a single shared gate. No route can bypass a configured second factor. |
+
+### Microsoft Entra ID sign-in
+
+Uses the `organizations` authority, so work and school accounts only; personal Microsoft accounts are excluded. PKCE (S256) is used in addition to a confidential client secret.
+
+<Warning>
+  **Directory restriction is available and we recommend it.** Because CRE Fuel maps identity by email address, and because any Entra tenant administrator can set an arbitrary `email` attribute on their own users, CRE Fuel does not treat a Microsoft-issued token as proof of an address on its own.
+
+  An address is accepted only when the originating tenant (`tid`) is on a configured allowlist, or when Microsoft asserts `xms_edov` (email domain owner verified). If neither condition can be evaluated, sign-in is refused rather than allowed.
+
+  Give us your tenant GUID and we will restrict sign-in to your directory alone.
+</Warning>
+
+---
+
+## Data protection
+
+- **In transit:** TLS 1.2 or 1.3 throughout, with 2048-bit keys or stronger.
+- **At rest:** AES-256 for platform data. Integration credentials are additionally sealed with AES-256-GCM, an authenticated cipher, so tampering is detected as well as prevented.
+- **Tenancy:** every brokerage is a separate account with its own credentials, and every request is scoped to that account server-side. There is no shared table across customers.
+- **Authorization:** role restrictions (for example, limiting an agent to their own assigned records, or withholding commission data from a support user) are enforced at the API layer, not by hiding interface elements.
+- **Credential exposure:** platform API tokens are fenced to server-side execution at build time and cannot be included in any browser bundle.
+- **Local storage:** no customer business records are written to local disk anywhere in the system. This has been audited specifically rather than assumed.
+
+### Response headers
+
+`Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `X-Frame-Options: SAMEORIGIN`, `Content-Security-Policy: frame-ancestors 'self'`, `Referrer-Policy: strict-origin-when-cross-origin`, and a `Permissions-Policy` denying camera, geolocation, and USB.
+
+A full script-level Content-Security-Policy is not yet deployed. We would rather say that plainly than ship a permissive one that looks good on a checklist and stops nothing.
+
+---
+
+## Hosting and subprocessors
+
+All infrastructure is United States based. The provider list is deliberately short, because every additional integration is another party with access.
+
+Between them, the providers holding, transmitting, and hosting your data carry:
+
+<CardGroup cols={2}>
+  <Card title="SOC 2 Type II" icon="shield-check">
+    Independently assessed annually against AICPA criteria for security, availability, and confidentiality.
+  </Card>
+  <Card title="ISO/IEC 27001" icon="certificate">
+    Certified information security management.
+  </Card>
+  <Card title="EU-U.S. Data Privacy Framework" icon="globe">
+    Certified transfer mechanism, with GDPR, CCPA, and CAN-SPAM readiness.
+  </Card>
+  <Card title="Annual penetration testing" icon="bug">
+    Third-party testing plus continuous vulnerability scanning.
+  </Card>
+</CardGroup>
+
+<Note>
+  **We will name every subprocessor on request,** with links to each one's trust centre so your team can download the certificates and audit reports themselves rather than taking our summary for it. Ask and we will send the list the same day, along with a data processing agreement if your ownership requires one.
+</Note>
+
+---
+
+## Vulnerability disclosure
+
+Security contact: **security@crefuel.co**, also published at `https://app.crefuel.co/.well-known/security.txt` per RFC 9116.
+
+We will not pursue anyone who reports a genuine issue in good faith and gives us a reasonable window to fix it before publishing.
+
+---
+
+## Data ownership and exit
+
+Your brokerage owns its data outright. It is exportable at any time in standard formats, and if you stop using CRE Fuel you keep all of it. CRE Fuel is a presentation and workflow layer; removing it does not remove the underlying records.
+
+---
+
+## What CRE Fuel does not claim
+
+CRE Fuel does not hold its own SOC 2 attestation. It is a young product, and that certification is a function of company age and audit cycles rather than of engineering practice. We state this plainly because a reviewer would find out, and discovering it after the fact would rightly cost us more than saying it up front.
+
+What we do assert is that data custody, encryption, and infrastructure sit with independently audited providers whose reports are available to you today, and that the controls above are implemented and demonstrable. Attestation for CRE Fuel itself follows as the company grows.
+
+Also not yet implemented, so that nothing here is a surprise later:
+
+- SAML (Entra ID and Google OIDC are supported; SAML is not)
+- SCIM automated user provisioning
+- Customer-managed encryption keys
+- A published uptime SLA
+
+---
+
+## Getting more {#getting-more}
+
+Any of the following, whichever suits your process:
+
+- Completing your standard vendor security questionnaire
+- A call between your IT lead and ours, at whatever depth they want
+- The full named subprocessor list with current attestations
+- A signed data processing agreement
+- A live demonstration of any control on this page
+
+Security questions from an IT team are a sign they are doing their job. We would rather answer forty of them now than have anyone uneasy later.

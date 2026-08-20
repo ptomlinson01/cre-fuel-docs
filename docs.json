@@ -102,6 +102,15 @@
             ]
           },
           {
+            "group": "Security",
+            "pages": [
+              "security/overview",
+              "security/two-factor",
+              "security/sign-in-options",
+              "security/for-your-it-team"
+            ]
+          },
+          {
             "group": "Settings and Help",
             "pages": [
               "settings/account-settings",
