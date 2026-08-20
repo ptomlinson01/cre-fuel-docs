@@ -111,12 +111,13 @@ CRE Fuel does not hold its own SOC 2 attestation. It is a young product, and tha
 
 What we do assert is that data custody, encryption, and infrastructure sit with independently audited providers whose reports are available to you today, and that the controls above are implemented and demonstrable. Attestation for CRE Fuel itself follows as the company grows.
 
-Also not yet implemented, so that nothing here is a surprise later:
+### Scope of what is available today
 
-- SAML (Entra ID and Google OIDC are supported; SAML is not)
-- SCIM automated user provisioning
-- Customer-managed encryption keys
-- A published uptime SLA
+Stated so that nothing surprises your reviewer three weeks into an evaluation:
+
+- **Single sign-on is OpenID Connect, not SAML.** Microsoft Entra ID and Google are both supported, which is the federation path Microsoft recommends for new applications. If your identity provider can only federate over SAML, tell us early.
+- **User provisioning is manual.** There is no SCIM. In practice, restricting sign-in to your directory means disabling someone in Entra already closes their access to CRE Fuel, which is the outcome SCIM usually exists to guarantee.
+- **Uptime is not covered by a published SLA.** We will commit to availability terms directly in your agreement if your ownership requires them.
 
 ---
 
