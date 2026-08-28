@@ -43,8 +43,30 @@ If you have a Google account, you can use it to sign in. Google checks who you a
 CRE Fuel uses OpenID Connect for this, and asks Google for three things only: `openid`, `email`, and `profile`.
 
 <Note>
-  **CRE Fuel does not request access to your mail, your calendar, or your contacts.** Those permissions are never asked for and cannot be granted through signing in.
+  **Signing in gives CRE Fuel your identity and nothing else.** It cannot read your mail, your calendar, or your contacts. Those permissions cannot be granted through the sign-in screen at all.
 </Note>
+
+---
+
+## Connecting your calendar is separate
+
+Signing in and connecting something are two different things, and it is worth knowing which is which.
+
+**CRE Fuel never asks for access to your mail.** It does not read your inbox, and there is no feature that does.
+
+Your **calendar** is optional, and it is something you switch on yourself in **Settings > Calendar** — signing in never does it for you. If you connect it:
+
+- CRE Fuel can see when you are already committed, so it does not book you over an appointment you already have.
+- **Nothing already on your calendar is changed**, moved, or deleted.
+- Your calendar is not copied into CRE Fuel. Existing events are read to answer "are you free then?" at the moment the answer is needed.
+
+Outlook is available now. Google Calendar is coming.
+
+You can disconnect at any time in **Settings > Calendar**, and you can revoke access directly from your Microsoft or Google account.
+
+<Tip>
+  If you never connect a calendar, nothing changes. CRE Fuel works exactly as it does today.
+</Tip>
 
 ---
 
