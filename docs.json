@@ -115,6 +115,7 @@
             "pages": [
               "settings/account-settings",
               "settings/team",
+              "settings/pipelines",
               "troubleshooting/faq"
             ]
           }
